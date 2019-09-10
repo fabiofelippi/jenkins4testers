@@ -10,7 +10,7 @@ pipeline{
             steps {
                 sh"chmod +x build/alpine.sh"
                 sh"./build/alpine.sh"
-                sh "bundle update --bundler"
+                sh "gem install bundler"
                 sh "bundle install"
             }
         }
